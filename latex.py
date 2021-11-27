@@ -47,7 +47,7 @@ class Model:
         return data
 
     def load_template(self, path):
-        return self.latex_env.get_template(args.template)
+        return self.latex_env.get_template(path)
     
     def render(self, out = None):
         document = self.template.render(self.data)
