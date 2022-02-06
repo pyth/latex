@@ -1,5 +1,4 @@
 # latex
-Generates a latex file from a tex template and a json data source
 
 ## About
 Generates a TEX-file from a jinja2 template and a JSON with data
