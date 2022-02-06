@@ -3,5 +3,18 @@
 \usepackage{babel}
 
 \begin{document}
-Hello {{place}}!
+Hello \VAR{place}!
+\vspace{1cm}\\
+\begin{tabular}{ccc}
+\BLOCK{for col in table_header}
+\BLOCK{if loop.last}\VAR{col} \\
+\BLOCK{else}\VAR{col} & \BLOCK{endif}
+\BLOCK{endfor}
+\BLOCK{for row in table_data}
+\BLOCK{for col in row}
+\BLOCK{if loop.last}\VAR{col} \\
+\BLOCK{else}\VAR{col} & \BLOCK{endif}
+\BLOCK{endfor}
+\BLOCK{endfor}
+\end{tabular}
 \end{document}

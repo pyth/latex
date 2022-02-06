@@ -1,1 +1,25 @@
-{"place": "Schwabach 20% test"}
+{
+	"place": "wherever 20% test",
+	"table_header": [
+		"Col_1",
+		"Col_2",
+		"Col_3"
+	],
+	"table_data":  [
+		[
+			"Test_1_1",
+			"Test_1_2",
+			"Test_1_3"
+		],
+		[
+			"Test_2_1",
+			"Test_2_2",
+			"Test_2_3"
+		],
+		[
+			"Test_3_1",
+			"Test_3_2",
+			"Test_3_3"
+		]
+	]
+}
