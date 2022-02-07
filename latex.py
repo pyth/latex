@@ -8,16 +8,17 @@ import argparse
 
 class Model:
 	latex_env = jinja2.Environment(
-		block_start_string = '\BLOCK{',
-        block_end_string = '}',
-        variable_start_string = '\VAR{',
-        variable_end_string = '}',
+#	block_start_string = '\BLOCK{',
+#	block_end_string = '}',
+#	variable_start_string = '\VAR{',
+#	variable_end_string = '}',
 		trim_blocks = True,
 		autoescape = False,
 		loader = jinja2.FileSystemLoader(os.path.abspath('.'))
 	)
 
 	conv = {
+		'\n': r'\\ ',
 		'&': r'\&',
 		'%': r'\%',
 		'$': r'\$',
