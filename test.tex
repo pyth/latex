@@ -1,20 +1,21 @@
 \documentclass[12pt, english]{article}
 \usepackage[T1]{fontenc}
 \usepackage{babel}
+\usepackage{makecell}
 
 \begin{document}
-Hello \VAR{place}!
+Hello {{place}}!
 \vspace{1cm}\\
 \begin{tabular}{ccc}
-\BLOCK{for col in table_header}
-\BLOCK{if loop.last}\VAR{col} \\
-\BLOCK{else}\VAR{col} & \BLOCK{endif}
-\BLOCK{endfor}
-\BLOCK{for row in table_data}
-\BLOCK{for col in row}
-\BLOCK{if loop.last}\VAR{col} \\
-\BLOCK{else}\VAR{col} & \BLOCK{endif}
-\BLOCK{endfor}
-\BLOCK{endfor}
+{% for col in table_header %}
+{% if loop.last %}{{col}} \\
+{% else %}{{col}} & {% endif %}
+{% endfor %}
+{% for row in table_data %}
+{% for col in row %}
+{%if loop.last %} {{col}} \\
+{% else %} \makecell{ {{col}}} & {% endif %}
+{% endfor %}
+{% endfor %}
 \end{tabular}
 \end{document}
