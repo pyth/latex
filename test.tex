@@ -4,7 +4,12 @@
 \usepackage{makecell}
 
 \begin{document}
-Hello {{place}}!
+Hello {{place}}!\\
+{% set dev = namespace(value=0) %}
+{% for i in range(10) %}
+{% set dev.value = i %}
+{% endfor %}
+{{dev.value}}\\
 \vspace{1cm}\\
 \begin{tabular}{ccc}
 {% for col in table_header %}
